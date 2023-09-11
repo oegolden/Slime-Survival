@@ -5,18 +5,18 @@ class Player:
     def __init__(self,x,y,status = "uninjured"):
         self.x = x
         self.y = y
-        self.texture = pygame.image.load("Slime Survival\Player Sprites\move0.png")
+        self.texture = pygame.image.load("Player Sprites\move0.png")
         self.texture = pygame.transform.scale_by(self.texture,4)
-        self.walk_animation = [pygame.image.load("Slime Survival\Player Sprites\move3.png"),
-            pygame.image.load("Slime Survival\Player Sprites\move4.png"), pygame.image.load("Slime Survival\Player Sprites\move5.png"), 
-            pygame.image.load("Slime Survival\Player Sprites\move6.png"),pygame.image.load("Slime Survival\Player Sprites\move7.png")
-            ,pygame.image.load("Slime Survival\Player Sprites\move8.png"),pygame.image.load("Slime Survival\Player Sprites\move9.png")]
+        self.walk_animation = [pygame.image.load("Player Sprites\move3.png"),
+            pygame.image.load("Player Sprites\move4.png"), pygame.image.load("Player Sprites\move5.png"), 
+            pygame.image.load("Player Sprites\move6.png"),pygame.image.load("Player Sprites\move7.png")
+            ,pygame.image.load("Player Sprites\move8.png"),pygame.image.load("Player Sprites\move9.png")]
         
-        self.injury_animation = [pygame.image.load("Slime Survival\Player Sprites\injured1.png"),
-        pygame.image.load("Slime Survival\Player Sprites\injured2.png"), pygame.image.load("Slime Survival\Player Sprites\injured3.png")]
-        self.sprint_animation = [pygame.image.load("Slime Survival\Player Sprites\Frame2.png"),
-            pygame.image.load("Slime Survival\Player Sprites\Frame3.png"),pygame.image.load("Slime Survival\Player Sprites\Frame4.png"), pygame.image.load("Slime Survival\Player Sprites\Frame5.png"),
-            pygame.image.load("Slime Survival\Player Sprites\Frame6.png"),pygame.image.load("Slime Survival\Player Sprites\Frame7.png"),pygame.image.load("Slime Survival\Player Sprites\Frame8.png")]
+        self.injury_animation = [pygame.image.load("Player Sprites\injured1.png"),
+        pygame.image.load("Player Sprites\injured2.png"), pygame.image.load("Player Sprites\injured3.png")]
+        self.sprint_animation = [pygame.image.load("Player Sprites\Frame2.png"),
+            pygame.image.load("Player Sprites\Frame3.png"),pygame.image.load("Player Sprites\Frame4.png"), pygame.image.load("Player Sprites\Frame5.png"),
+            pygame.image.load("Player Sprites\Frame6.png"),pygame.image.load("Player Sprites\Frame7.png"),pygame.image.load("Player Sprites\Frame8.png")]
         self.rect = self.texture.get_rect()
         self.status = status
         self.default_speed = 200
@@ -108,7 +108,7 @@ class Player:
     
     
     def set_default_texture(self):
-        self.texture = pygame.transform.scale_by(pygame.image.load("Slime Survival\Player Sprites\move0.png"),4)
+        self.texture = pygame.transform.scale_by(pygame.image.load("Player Sprites\move0.png"),4)
 
     
     def statusupdater(self):

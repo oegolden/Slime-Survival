@@ -33,7 +33,7 @@ class Projectile:
         self.y = y
         self.vel = (speed*math.cos(math.radians(direc_facing))*dt, speed*math.sin(math.radians(direc_facing))*dt)
         self.current_frame = 0
-        self.texture = pygame.transform.scale_by(pygame.image.load("Slime Survival\Projectile Animations\m1.png"),5)
+        self.texture = pygame.transform.scale_by(pygame.image.load("Projectile Animations\m1.png"),5)
         self.rect = pygame.Rect(self.x,self.y,self.texture.get_width(),self.texture.get_height())
         self.direc_facing = direc_facing
         self.active = True
@@ -64,8 +64,8 @@ class Projectile:
         return False
 
     def projectile_animation(self):
-        #Sample Relative Path: Slime Survival\Projectile Animations\m13.png
-        root_dir = "Slime Survival\Projectile Animations"
+        #Sample Relative Path: Projectile Animations\m13.png
+        root_dir = "Projectile Animations"
         animation = []
 
         for path in os.listdir(root_dir):

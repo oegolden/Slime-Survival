@@ -6,17 +6,17 @@ class Enemy(Player):
     
     def __init__(self,x,y,status = "uninjured"):
         super().__init__(x,y,status)
-        self.texture = pygame.image.load("Slime Survival\Enemy Sprites\Idle\Frame1.png")
+        self.texture = pygame.image.load("Enemy Sprites\Idle\Frame1.png")
         self.texture = pygame.transform.scale_by(self.texture,4)
-        self.injury_animation = [pygame.image.load("Slime Survival\Enemy Sprites\Hit\Frame1.png"),
-        pygame.image.load("Slime Survival\Enemy Sprites\Hit\Frame2.png"), pygame.image.load("Slime Survival\Enemy Sprites\Hit\Frame3.png")]
-        self.walk_animation = [pygame.image.load("Slime Survival\Enemy Sprites\Movement\Walk\Frame1.png"),
-            pygame.image.load("Slime Survival\Enemy Sprites\Movement\Walk\Frame2.png"), pygame.image.load("Slime Survival\Enemy Sprites\Movement\Walk\Frame3.png"), 
-            pygame.image.load("Slime Survival\Enemy Sprites\Movement\Walk\Frame4.png"),pygame.image.load("Slime Survival\Enemy Sprites\Movement\Walk\Frame5.png")
-            ,pygame.image.load("Slime Survival\Enemy Sprites\Movement\Walk\Frame6.png")]
-        self.sprint_animation = [pygame.image.load("Slime Survival\Enemy Sprites\Movement\Run\Frame1.png"),pygame.image.load("Slime Survival\Enemy Sprites\Movement\Run\Frame2.png"),pygame.image.load("Slime Survival\Enemy Sprites\Movement\Run\Frame3.png"),
-                                 pygame.image.load("Slime Survival\Enemy Sprites\Movement\Run\Frame4.png"),pygame.image.load("Slime Survival\Enemy Sprites\Movement\Run\Frame5.png"),pygame.image.load("Slime Survival\Enemy Sprites\Movement\Run\Frame6.png"),
-                                 pygame.image.load("Slime Survival\Enemy Sprites\Movement\Run\Frame7.png")]
+        self.injury_animation = [pygame.image.load("Enemy Sprites\Hit\Frame1.png"),
+        pygame.image.load("Enemy Sprites\Hit\Frame2.png"), pygame.image.load("Enemy Sprites\Hit\Frame3.png")]
+        self.walk_animation = [pygame.image.load("Enemy Sprites\Movement\Walk\Frame1.png"),
+            pygame.image.load("Enemy Sprites\Movement\Walk\Frame2.png"), pygame.image.load("Enemy Sprites\Movement\Walk\Frame3.png"), 
+            pygame.image.load("Enemy Sprites\Movement\Walk\Frame4.png"),pygame.image.load("Enemy Sprites\Movement\Walk\Frame5.png")
+            ,pygame.image.load("Enemy Sprites\Movement\Walk\Frame6.png")]
+        self.sprint_animation = [pygame.image.load("Enemy Sprites\Movement\Run\Frame1.png"),pygame.image.load("Enemy Sprites\Movement\Run\Frame2.png"),pygame.image.load("Enemy Sprites\Movement\Run\Frame3.png"),
+                                 pygame.image.load("Enemy Sprites\Movement\Run\Frame4.png"),pygame.image.load("Enemy Sprites\Movement\Run\Frame5.png"),pygame.image.load("Enemy Sprites\Movement\Run\Frame6.png"),
+                                 pygame.image.load("Enemy Sprites\Movement\Run\Frame7.png")]
         self.max_health = 3
         self.health_points = 3
         self.spawned = False
@@ -106,7 +106,7 @@ class Enemy(Player):
         super().update_player_texture()
 
     def set_default_texture(self):
-        self.texture = pygame.transform.scale_by(pygame.image.load("Slime Survival\Enemy Sprites\Idle\Frame1.png"),4)
+        self.texture = pygame.transform.scale_by(pygame.image.load("Enemy Sprites\Idle\Frame1.png"),4)
 
     def detect_player_hit(self, projectile):
         if self.rect.colliderect(projectile.rect) and (self.status == "uninjured"):

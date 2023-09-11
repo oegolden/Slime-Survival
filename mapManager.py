@@ -23,10 +23,10 @@ class Tile:
 
 class Spawn_Tile(Tile):
     def __init__(self,pos,solid=False):
-        super().__init__(pygame.image.load("Slime Survival\Environment Tiles\Water\WaterAnim1.png"),pos,solid)
+        super().__init__(pygame.image.load("Environment Tiles\Water\WaterAnim1.png"),pos,solid)
         self.current_frame = 0
-        self.water_animation = [pygame.image.load("Slime Survival\Environment Tiles\Water\WaterAnim1.png"),pygame.image.load("Slime Survival\Environment Tiles\Water\WaterAnim2.png"),
-                           pygame.image.load("Slime Survival\Environment Tiles\Water\WaterAnim3.png"),pygame.image.load("Slime Survival\Environment Tiles\Water\WaterAnim4.png")]
+        self.water_animation = [pygame.image.load("Environment Tiles\Water\WaterAnim1.png"),pygame.image.load("Environment Tiles\Water\WaterAnim2.png"),
+                           pygame.image.load("Environment Tiles\Water\WaterAnim3.png"),pygame.image.load("Environment Tiles\Water\WaterAnim4.png")]
     
     def animate_water(self):
         if self.current_frame >= len(self.water_animation)*15-1:
@@ -45,18 +45,18 @@ class Tile_Manager:
         self.spawner_tile = []
         self.solid_tile_queue = deque()
         self.solid_tile_dic = {
-            1:pygame.image.load("Slime Survival\Environment Tiles\Rock2.png"),
-            2:pygame.image.load("Slime Survival\Environment Tiles\Trees\Branch.png"),
-            3:pygame.image.load("Slime Survival\Environment Tiles\Trees\Tree1.png"),
-            4:pygame.image.load("Slime Survival\Environment Tiles\Trees\Tree2.png"),
+            1:pygame.image.load("Environment Tiles\Rock2.png"),
+            2:pygame.image.load("Environment Tiles\Trees\Branch.png"),
+            3:pygame.image.load("Environment Tiles\Trees\Tree1.png"),
+            4:pygame.image.load("Environment Tiles\Trees\Tree2.png"),
             
         }
         self.liquid_tile_dic = {
-            5:pygame.image.load("Slime Survival\Environment Tiles\Dark Grass 2x tile.png"),
-            6:pygame.image.load("Slime Survival\Environment Tiles\Dirt.png"),
-            7:pygame.image.load("Slime Survival\Environment Tiles\Trees\Treeshadow.png"),
-            8:pygame.image.load("Slime Survival\Environment Tiles\Flowers\\tile001.png"),
-            9:pygame.image.load("Slime Survival\Environment Tiles\Flowers\\tile002.png"),
+            5:pygame.image.load("Environment Tiles\Dark Grass 2x tile.png"),
+            6:pygame.image.load("Environment Tiles\Dirt.png"),
+            7:pygame.image.load("Environment Tiles\Trees\Treeshadow.png"),
+            8:pygame.image.load("Environment Tiles\Flowers\\tile001.png"),
+            9:pygame.image.load("Environment Tiles\Flowers\\tile002.png"),
 
         }
 
