@@ -2,8 +2,8 @@ import pygame, sys, time, player,enemy,threading,enemy_containter,UI,Projectile_
 from enemy import Enemy
 from  player import Player
 #Main clas final variables
-WIDTH = 1440
-HEIGHT = 1080
+WIDTH = 1080
+HEIGHT = 810
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 background_color = pygame.Color(135,159,41)
@@ -62,7 +62,7 @@ while True:
         if event.type == new_round:
             ui.new_round()
             if ui.round <= 20:
-                spawn_delay -= 50
+                spawn_delay -= 10
             pygame.time.set_timer(spawn_event , spawn_delay )
     if player.health_points == 0:
         player.reset_player(WIDTH/2,HEIGHT/2+70)
